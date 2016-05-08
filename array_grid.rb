@@ -9,13 +9,8 @@ class ArrayGrid
 
   end
 
-  def getLargo
-    return @largo
-  end
-
-  def getAncho
-    return @ancho
-  end
+  attr_reader:largo
+  attr_reader:ancho
 
   def llenar_grilla
 
@@ -27,6 +22,24 @@ class ArrayGrid
 
         $gridArray[i][j] = '-'
 
+      end
+
+    end
+
+  end
+
+  def insertar_pobladores(poblador)
+
+    for i in 0..@largo-1 do
+
+      for j in 0..@ancho-1 do
+        num = Random.new
+        test = num.rand(1.0)
+
+        if(poblador.probabilidad >= test)
+          $gridArray[i][j] = poblador.simbolo()
+
+        end
       end
 
     end
@@ -45,23 +58,6 @@ class ArrayGrid
 
     end
     puts
-  end
-
-  def insertar_pobladores(poblador)
-
-    if(poblador.probabilidad <= rand(0.1))
-      for i in 0..@largo-1 do
-
-        $gridArray[i] = poblador.simbolo()
-        for j in 0..@ancho-1 do
-
-          $gridArray[i][j] = poblador.simbolo()
-
-        end
-
-      end
-    end
-
   end
 
 end
