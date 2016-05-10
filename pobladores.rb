@@ -17,13 +17,4 @@ class Pobladores
   attr_reader:movimiento
   attr_accessor:contador
 
-  def insertar_grid(largo,ancho)
-
-    for i in 0..(largo*ancho) do
-
-      $pobladores[i] = Pobladores.new('Hierba','H',1,0,0.01,0)
-      grilla.insertar_pobladores($pobladores[i])
-
-    end
-  end
 end
