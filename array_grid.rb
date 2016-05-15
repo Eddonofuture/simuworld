@@ -38,6 +38,8 @@ class ArrayGrid
 
         if(poblador.probabilidad >= test)
           $gridArray[i][j] = poblador.simbolo()
+          poblador.posicionx = i
+          poblador.posiciony = j
 
         end
       end

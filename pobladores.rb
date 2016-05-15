@@ -1,4 +1,6 @@
 class Pobladores
+  @posicionx
+  @posiciony
   def initialize(nombre,simbolo,codigo,alimenta,probabilidad,movimiento)
     @nombre = nombre
     @simbolo = simbolo
@@ -16,5 +18,7 @@ class Pobladores
   attr_reader:probabilidad
   attr_reader:movimiento
   attr_accessor:contador
+  attr_accessor:posicionx
+  attr_accessor:posiciony
 
 end

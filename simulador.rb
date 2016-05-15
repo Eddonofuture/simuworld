@@ -19,23 +19,23 @@ class Simular
         #no movimiento
       when 1
         #movimiento izquierda
-        if (grid.ancho - poblador[i].movimiento >= 0)
+        if (poblador[i].posicionx - poblador[i].movimiento >= 0)
           realizar_movimiento()
         end
 
       when 2
         #movimiento derecha
-        if (grid.ancho - poblador[i].movimiento >= )
+        if (poblador[i].posicionx + poblador[i].movimiento <= grid.ancho)
           realizar_movimiento()
         end
       when 3
         #movimiento arriba
-        if (grid.ancho - poblador[i].movimiento >= 0)
+        if (poblador[i].posiciony - poblador[i].movimiento >= 0)
           realizar_movimiento()
         end
       when 4
         #movimiento abajo
-        if (grid.ancho - poblador[i].movimiento >= 0)
+        if (poblador[i].posicionx + poblador[i].movimiento <= grid.largo)
           realizar_movimiento()
         end
 

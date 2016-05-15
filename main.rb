@@ -27,5 +27,5 @@ crear_poblador('Conejo','C',2,1,0.001,1,grilla)
 
 grilla.graficar()
 
-simulador = Simular.new($pobladores,grilla)
-simulador.simular_mov()
+#simulador = Simular.new($pobladores,grilla)
+#simulador.simular_mov()
