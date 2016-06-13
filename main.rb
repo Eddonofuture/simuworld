@@ -1,6 +1,6 @@
-require 'array_grid.rb'
-require 'pobladores.rb'
-require 'simulador.rb'
+require_relative  'array_grid.rb'
+require_relative  'pobladores.rb'
+require_relative  'simulador.rb'
 
 $pobladores = []
 puts 'Iniciando'

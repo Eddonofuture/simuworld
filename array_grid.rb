@@ -1,4 +1,4 @@
-require 'pobladores.rb'
+require_relative  'pobladores.rb'
 require 'text-table'
 
 class ArrayGrid

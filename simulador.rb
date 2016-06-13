@@ -1,5 +1,5 @@
-require 'pobladores.rb'
-require 'array_grid.rb'
+require_relative  'pobladores.rb'
+require_relative  'array_grid.rb'
 
 class Simular
   def initialize(pobladores,grid)
