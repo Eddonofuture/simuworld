@@ -1,4 +1,5 @@
 require 'pobladores.rb'
+require 'text-table'
 
 class ArrayGrid
   $gridArray
@@ -6,13 +7,6 @@ class ArrayGrid
 
     @largo = largo
     @ancho = ancho
-
-  end
-
-  attr_reader:largo
-  attr_reader:ancho
-
-  def llenar_grilla
 
     $gridArray = Array.new(@largo,@ancho)
     for i in 0..@largo-1 do
@@ -25,8 +19,10 @@ class ArrayGrid
       end
 
     end
-
   end
+
+  attr_reader:largo
+  attr_reader:ancho
 
   def insertar_pobladores(poblador)
 
@@ -50,16 +46,18 @@ class ArrayGrid
 
   def graficar
 
+    table = Text::Table.new
+
     for i in 0..@largo-1 do
       for j in 0..@ancho-1 do
 
-        print $gridArray[i][j]
+        table.rows << [$gridArray[i][j]]
 
       end
-      puts
-
+      table.rows << :separator
     end
-    puts
+
+    print table
   end
 
 end
