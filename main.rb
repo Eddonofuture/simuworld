@@ -6,8 +6,8 @@ $pobladores = []
 puts 'Iniciando'
 puts
 
+#creo la grilla para sustentar el tablero
 grilla = ArrayGrid.new(10,10)
-grilla.llenar_grilla()
 
 puts 'Insertar Pobladores'
 puts
